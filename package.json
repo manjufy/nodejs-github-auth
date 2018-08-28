@@ -2,7 +2,7 @@
   "name": "nodejs-github-auth",
   "version": "1.0.0",
   "description": "Node.JS + Github Auth",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/manjufy/nodejs-github-auth/issues"
   },
-  "homepage": "https://github.com/manjufy/nodejs-github-auth#readme"
+  "homepage": "https://github.com/manjufy/nodejs-github-auth#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "express-jwt": "^5.3.1",
+    "jwks-rsa": "^1.3.0"
+  }
 }
