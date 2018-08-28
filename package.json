@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-github-auth",
+  "version": "1.0.0",
+  "description": "Node.JS + Github Auth",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manjufy/nodejs-github-auth.git"
+  },
+  "keywords": [
+    "nodejs",
+    "github+auth",
+    "vuejs+github"
+  ],
+  "author": "Manjunath Reddy <manju16832003@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manjufy/nodejs-github-auth/issues"
+  },
+  "homepage": "https://github.com/manjufy/nodejs-github-auth#readme"
+}
