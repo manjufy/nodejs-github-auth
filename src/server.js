@@ -5,6 +5,7 @@ const bodyParser = require('body-parser')
 const express = require('express')
 const axios = require('axios')
 const app = express()
+const util = require('util')
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -15,11 +16,10 @@ app.get('/', (req, res) => {
   res.json([{}])
 })
 
-app.get('/auth', (req, res) => {
+app.get('/auth', async (req, res) => {
   const code = req.query.code
-  console.log('CODE', code)
       // Make a post request to Github
-    return axios.post('https://github.com/login/oauth/access_token', {
+    const response = await axios.post('https://github.com/login/oauth/access_token', {
       client_id: '13713e448956673736bb',
       client_secret: 'c1b575cce6f3fc4e77ec829c6bcd7657ebd6a9ce',
       code,
@@ -30,6 +30,9 @@ app.get('/auth', (req, res) => {
         'crossDomain': true
       }
     })
+    const token = response.data
+
+    res.send(token)
 })
 
 app.listen(3333)
