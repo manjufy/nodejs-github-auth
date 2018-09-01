@@ -18,9 +18,8 @@ app.get('/', (req, res) => {
 app.get('/auth', (req, res) => {
   const code = req.query.code
   console.log('CODE', code)
-      // TODO in progress.
       // Make a post request to Github
-    axios.post('https://github.com/login/oauth/access_token', {
+    return axios.post('https://github.com/login/oauth/access_token', {
       client_id: '13713e448956673736bb',
       client_secret: 'c1b575cce6f3fc4e77ec829c6bcd7657ebd6a9ce',
       code,
@@ -31,10 +30,6 @@ app.get('/auth', (req, res) => {
         'crossDomain': true
       }
     })
-    .then(data => {
-      console.log('Data', data)
-    })
-
 })
 
 app.listen(3333)
