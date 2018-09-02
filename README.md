@@ -9,3 +9,8 @@ Make sure to install nodemon locally in global mode
 and
 
 `npm run dev` to start
+
+
+### Github OAuth flow explained
+
+https://github.com/octokit/octokit.net/blob/master/docs/oauth-flow.md
