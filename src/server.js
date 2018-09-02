@@ -1,10 +1,12 @@
+const express = require('express')
+
 const app = express()
 const axios = require('axios')
 const bodyParser = require('body-parser')
 const cors = require('cors')
-const express = require('express')
 const jwt = require('express-jwt')
 const jwks = require('jwks-rsa')
+const queryStr = require('querystring')
 const util = require('util')
 const octokit = require('@octokit/rest')
 app.use(bodyParser.json());
@@ -30,9 +32,14 @@ app.get('/auth', async (req, res) => {
         'crossDomain': true
       }
     })
+
+
+    // Response is in the form of access_token=50d935da34d5bf48d0560e30d1f052ee56d030bc&scope=user%3Aemail&token_type=bearer
     const token = response.data
 
-    res.send(token)
+    res.json(
+      queryStr.parse(token)
+    )
 })
 
 app.listen(3333)
