@@ -14,3 +14,7 @@ and
 ### Github OAuth flow explained
 
 https://github.com/octokit/octokit.net/blob/master/docs/oauth-flow.md
+
+### TODO
+
+Implement a package to consume Github auth code and return access token

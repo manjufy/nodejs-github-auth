@@ -20,6 +20,7 @@ app.get('/', (req, res) => {
 
 app.get('/auth', async (req, res) => {
   const code = req.query.code
+
       // Make a post request to Github
     const response = await axios.post('https://github.com/login/oauth/access_token', {
       client_id: '13713e448956673736bb',
