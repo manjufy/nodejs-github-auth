@@ -5,11 +5,7 @@ const app = express()
 const axios = require('axios')
 const bodyParser = require('body-parser')
 const cors = require('cors')
-const jwt = require('express-jwt')
-const jwks = require('jwks-rsa')
 const queryStr = require('querystring')
-const util = require('util')
-const octokit = require('@octokit/rest')
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
