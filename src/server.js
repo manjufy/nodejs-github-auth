@@ -1,9 +1,7 @@
-const cors = require('cors')
 const bodyParser = require('body-parser')
 const express = require('express')
 const app = express()
 const axios = require('axios')
-const bodyParser = require('body-parser')
 const cors = require('cors')
 const queryStr = require('querystring')
 app.use(bodyParser.json());
@@ -30,7 +28,6 @@ app.get('/auth', async (req, res) => {
         'crossDomain': true
       }
     })
-
 
     // Response is in the form of access_token=50d935da34d5bf48d0560e30d1f052ee56d030bc&scope=user%3Aemail&token_type=bearer
     const token = response.data
